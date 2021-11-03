@@ -1,0 +1,123 @@
+header{
+    border-radius: 0px 0px 10px 10px;
+}
+
+.notice-board{
+    border-radius: 10px;
+}
+
+@media (min-width: 576px) {
+    header {
+        border-radius: 10px;
+    }
+}
+
+
+/* From To UI element */
+.from-block:after, .to-block:after{
+    content :"";
+    display: inline-block;
+    position: absolute;
+    left: 89px;
+    width: 15px;
+    height: 15px;
+    border: white solid 1px;
+    border-radius: 25px;
+}
+
+.from-block:after{
+    top:10px;
+    background-color: #67EF8D;
+}
+
+.to-block:after{
+    top: 65px;
+    background-color: #EF6F6F;
+}
+
+.from-to-dest:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 95px;
+    width: 2px;
+    height: 60px;
+    background-color: white;
+
+}
+
+
+
+.card-badge{
+    border-radius: 25px;
+    text-align: center;
+    margin-right: 4%;
+    min-width: 25px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: var(--primary-theme-color);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"], .custom-select {
+    height: 53px;
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus{
+    box-shadow: 0px 0px 5px 1px var(--very-light-grey);
+    border-color: var(--very-light-grey);
+}
+
+
+
+.hidden{
+    visibility: hidden;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.btn{
+    height: 53px;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: var(--seconday-highlight-theme-color);
+}
+
+
+
+/* Thumb Custom Css */
+.custom-range::-webkit-slider-thumb {
+    background: var(--primary-theme-color);
+}
+
+.bubble{
+    background: var(--primary-light-theme-color);
+    border: #82d7ff solid 2px;
+    color: var(--primary-theme-color);
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    top: -30px;
+    left: 23px;
+    text-align: center;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.custom-range:hover+.bubble{
+    opacity: 0.5;
+}

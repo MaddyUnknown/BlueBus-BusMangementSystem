@@ -1,0 +1,48 @@
+/* Backgroud Color */
+.bg-theme-primary{
+    background-color: var(--primary-theme-color);
+}
+
+.bg-theme-primary-dark{
+    background-color: var(--primary-dark-theme-color);
+}
+
+.bg-theme-primary-light{
+    background-color: var(--primary-light-theme-color);
+}
+
+.bg-theme-secondary{
+    background-color: var(--seconday-theme-color);
+}
+
+.bg-theme-secondary-highlight{
+    color: var(--seconday-highlight-theme-color);
+}
+
+/* Text Color */
+.text-theme-primary{
+    color: var(--primary-theme-color);
+}
+
+.text-theme-primary-dark{
+    color: var(--primary-dark-theme-color);
+}
+
+.text-theme-primary-light{
+    color: var(--primary-light-theme-color);
+}
+
+.text-theme-secondary{
+    color: var(--secondary-theme-color);
+}
+
+.text-theme-secondary-highlight{
+    color: var(--seconday-highlight-theme-color);
+}
+
+.text-theme-white{
+    color: #fff;
+}
+.text-theme-grey{
+    color: var(--grey);
+}
