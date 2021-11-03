@@ -13,10 +13,10 @@ function setBubble(range, bubble) {
     const val = range.value;
     const min = range.min;
     const max = range.max;
-    const newVal = Number(((val - min) * 89) / (max - min));
+    const newVal = Number(((val - min) * 100) / (max - min));
     bubble.innerHTML = val;
 
-     bubble.style.left = `calc(${newVal}% + (23px))`;
+     bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
 
 

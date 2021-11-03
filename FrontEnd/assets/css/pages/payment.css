@@ -6,13 +6,6 @@ header{
     border-radius: 10px;
 }
 
-@media (min-width: 576px) {
-    header {
-        border-radius: 10px;
-    }
-}
-
-
 /* From To UI element */
 .from-block:after, .to-block:after{
     content :"";
@@ -44,7 +37,7 @@ header{
     width: 2px;
     height: 60px;
     background-color: white;
-
+    
 }
 
 
@@ -110,7 +103,7 @@ input[type="text"]:focus{
     width: 28px;
     height: 28px;
     border-radius: 50px;
-    top: -30px;
+    top: 25px;
     left: 23px;
     text-align: center;
     transform: translateX(-50%);
@@ -120,4 +113,15 @@ input[type="text"]:focus{
 
 .custom-range:hover+.bubble{
     opacity: 0.5;
+}
+
+
+@media (min-width: 576px) {
+    header {
+        border-radius: 10px;
+    }
+
+    .bubble{
+        top: -30px;
+    }
 }
