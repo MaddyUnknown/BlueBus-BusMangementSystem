@@ -69,8 +69,6 @@ input[type="text"]:focus{
     border-color: var(--very-light-grey);
 }
 
-
-
 .hidden{
     visibility: hidden;
 }
@@ -103,7 +101,7 @@ input[type="text"]:focus{
     width: 28px;
     height: 28px;
     border-radius: 50px;
-    top: 25px;
+    top: -28px; /*25px;*/
     left: 23px;
     text-align: center;
     transform: translateX(-50%);
@@ -111,8 +109,31 @@ input[type="text"]:focus{
     transition: opacity 0.25s;
 }
 
-.custom-range:hover+.bubble{
+.custom-range:hover+.bubble,
+.custom-range:active+.bubble,
+.custom-range:focus+.bubble{
     opacity: 0.5;
+}
+
+.loading-screen{
+    z-index: 9999;
+    position: fixed;
+    background-color: white;
+    opacity: 0.9;
+    width: 100vw;
+    height : 100vh;
+    transition: all 0.25s;
+}
+
+.loading-screen lottie-player{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.loading-screen h1{
+    position: relative;
+    top: -120px;
+    right: 10px;
 }
 
 

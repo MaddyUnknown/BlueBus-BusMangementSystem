@@ -18,9 +18,15 @@
     <link rel="stylesheet" href="assets/css/util.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pages/payment.css">
+    <!-- Toastr -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
 
 </head>
 <body>
+    <div class="p-0 m-0 loading-screen d-none">
+        <lottie-player class="mx-auto" src="https://assets9.lottiefiles.com/packages/lf20_Gg1cd9.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <h1 class="h1 f-26 text-center text-theme-primary-dark mx-auto">Loading...</h1>
+    </div>
     <div class="container">
         <nav class="navbar navbar-expand d-none d-md-block">
             <a href="#" class="navbar-brand d-flex align-items-center mb-3">
@@ -60,12 +66,10 @@
             </div>
             <div class="col-12 col-xl-4 d-flex mt-4 mt-xl-0 justify-content-end align-items-center f-26">
                 <span class="mr-4">Total Cost:</span>
-                <span class="font-weight-bold" >Rs. 
-                    <span id="total-ticket-cost">113000</span>                                                              <!-- TICKET TOTAL COST -->
-                </span>      
+                    <span class="font-weight-bold" id="total-ticket-cost"></span>                                                              <!-- TICKET TOTAL COST -->
             </div>
         </header>
-        <main class="row d-flex flex-column-reverse flex-lg-row px- py-4">
+        <main class="row d-flex flex-column-reverse flex-lg-row px-2 px-sm-0 py-4">
             <article class="col-12 col-lg-5 notice-board mt-3 mt-lg-0 py-5 px-4 border">
                 <h1 class="h1 f-22">Notice: </h1>
                 <p class="my-4">
@@ -99,7 +103,7 @@
                                 <small data-validator="email" class="text-danger hidden">Enter Valid Email Address</small>
                             </div>
                             <div class="form-group row">
-                                <label for="num-seats" class="col-sm-4 col-form-label">Number of Seats: </label>                
+                                <label for="num-seats" class="col-sm-4 col-form-label mb-4">Number of Seats: </label>                
                                 <div class="col-sm-8 my-auto">
                                     <div class="p-0 position-relative">
                                         <input type="range" class="custom-range " id="num-seats" min="1" max="6" steps="1">         <!-- NUMBER OF SEATS REQUERED -->
@@ -132,26 +136,18 @@
                                 <div class="form-row col-12 col-xl-8 mb-3">
                                     <div class="col-12 col-md-6 form-group pb-1 m-0 mb-2 mb-md-0">
                                         <select class="custom-select" id="month-exp">                                                   <!-- EXPIRY MONTH -->
-                                            <option value="" selected disabled hidden>Month of Exp.</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
+                                            <option value="none" selected disabled hidden>Month of Exp.</option>
+                                            
                                         </select>                             
                                         
                                     </div>
                                     <div class="col-12 col-md-6 form-group pb-1 m-0">
                                         <select class="custom-select" id="year-exp">
-                                            <option value="" selected disabled hidden>Year of Exp.</option>                             <!-- EMPIRY YEAR -->
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
+                                            <option value="none" selected disabled hidden>Year of Exp.</option>                             <!-- EMPIRY YEAR -->
+                                            
                                         </select>                     
                                     </div>
-                                    <small class="text-danger pl-1 hidden">Expiry date has passed or invalid</small>
+                                    <small data-validator="exp_date" class="text-danger pl-1 hidden">Expiry date has passed or invalid</small>
                                 </div>
                                 <button class="col-12 col-xl-4 btn bg-theme-secondary px-4 text-theme-white" type="button" id="submit-btn">Continue</button>            <!-- SUBMIT BUTTON -->
                             </div>
@@ -162,10 +158,18 @@
         </main>
     
     </div>
-
-    <script src="assets/js/pages/payment.js"></script>
+    
+    <script>const price_per_ticket = 700.50</script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-</body>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="assets/js/pages/payment.js"></script>
+    </body>
 </html>
