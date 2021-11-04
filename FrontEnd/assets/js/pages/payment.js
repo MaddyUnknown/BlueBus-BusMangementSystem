@@ -150,7 +150,7 @@ submit_btn.addEventListener("click", ()=>{
         loading_window.classList.remove("d-none")
         loading_window.classList.remove("opacity-0")
         $.ajax({
-            url : "http://demo9230605.mockable.io/"+"payment",          // url for request for booking
+            url : "https://demo9230605.mockable.io/"+"payment",          // url for request for booking
             type: "POST",
             dataType: "json",
             data: JSON.stringify(json_request),
